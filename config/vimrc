@@ -29,17 +29,6 @@ function! PackInit() abort
 
   " Additional plugins here.
 
-  call minpac#add('tpope/vim-surround')
-  " Use nerdtree instead.
-  call minpac#add('tpope/vim-vinegar', {'type': 'opt'})
-  " vim-commentary does not support nest comment. Disable it by default
-  call minpac#add('tpope/vim-commentary', {'type': 'opt'})
-  call minpac#add('tpope/vim-repeat')
-  call minpac#add('tpope/vim-speeddating')
-  call minpac#add('tpope/vim-endwise')
-  call minpac#add('tpope/vim-dispatch')
-  call minpac#add('tpope/vim-fugitive')
-
   " starsearch: Enhanced star keymapping. Avoid jumping to next
   call minpac#add('vim-scripts/star-search')
   call minpac#add('vim-scripts/ZoomWin')
@@ -59,6 +48,9 @@ function! PackInit() abort
 
   call minpac#add('ludovicchabant/vim-gutentags')
 
+  " surround-like plugin
+  call minpac#add('machakann/vim-sandwich')
+
   " Replace auto-pairs with delimitMate. Disable it by default
   call minpac#add('LunarWatcher/auto-pairs', {'type': 'opt'})
 
@@ -68,6 +60,8 @@ function! PackInit() abort
   call minpac#add('psliwka/vim-smoothie')
 
   call minpac#add('timsu92/vim-easymotion')
+
+  call minpac#add('mg979/vim-visual-multi')
 
   " Align text
   call minpac#add('godlygeek/tabular')
