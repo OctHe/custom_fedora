@@ -10,23 +10,13 @@ name = "@workstation-product-environment"
 name = "evolution"
 
 [[packages]]
-name = "fish"
+name = "nushell"
 
 [[customizations.directories]]
-path = "/etc/skel/.config/fish"
+path = "/etc/skel/.config"
 mode = "0755"
 user = "root"
 group = "root"
-ensure_parents = false
-
-[[customizations.files]]
-path = "/etc/skel/.config/fish/config.fish"
-mode = "0644"
-user = "root"
-group = "root"
-data = '''
-{{INSERT_FISH_CONFIG}}
-'''
 
 [[packages]]
 name = "vim-enhanced"
@@ -36,7 +26,6 @@ path = "/etc/skel/.vim"
 mode = "0755"
 user = "root"
 group = "root"
-ensure_parents = false
 
 [[customizations.files]]
 path = "/etc/skel/.vim/vimrc"
@@ -58,7 +47,6 @@ path = "/etc/skel/.config/tmux"
 mode = "0755"
 user = "root"
 group = "root"
-ensure_parents = false
 
 [[customizations.files]]
 path = "/etc/skel/.config/tmux/tmux.conf"
@@ -125,38 +113,24 @@ active-link-style=yellow,bold
 match-style=underline,bold,nocolor
 """
 
-# User. Please change the default password
-[[customizations.user]]
-name = "root"
-password = "31415926"
-
-[[customizations.user]]
-name = "Fedora"
-password = "31415926"
-shell = "/bin/fish"
-groups = ["wheel"]
-
 # Desktop icon for commands
 [[customizations.directories]]
 path = "/etc/skel/.local"
 mode = "0755"
 user = "root"
 group = "root"
-ensure_parents = false
 
 [[customizations.directories]]
 path = "/etc/skel/.local/share"
 mode = "0755"
 user = "root"
 group = "root"
-ensure_parents = false
 
 [[customizations.directories]]
 path = "/etc/skel/.local/share/applications"
 mode = "0755"
 user = "root"
 group = "root"
-ensure_parents = false
 
 [[customizations.files]]
 path = "/etc/skel/.local/share/applications/top.desktop"

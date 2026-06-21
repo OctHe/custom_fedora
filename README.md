@@ -8,7 +8,7 @@ Image builder is a command line tool, which is part of the tools in [osbuild](ht
 
 List all types
 
-    image-builder list --filter distro:fedora-44
+    image-builder list --filter distro:fedora-43
 
 ## Preinstall
 
@@ -22,4 +22,13 @@ Generate the blueprint file by running
 
 The image-builder will generate a minimal-installer
 
-    sudo image-builder build image-installer --distro fedora-44 --blueprint custom_fedora.toml
+    sudo image-builder build image-installer --distro fedora-43 --blueprint custom_fedora.toml
+
+
+## Postinstall
+
+After successfully install the OS, change the default shell to nushell by using the command
+
+    sudo chsh -s /usr/bin/nu <USER>
+
+where <USER> is the custom user name.

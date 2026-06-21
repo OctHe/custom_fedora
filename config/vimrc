@@ -37,7 +37,7 @@ function! PackInit() abort
   call minpac#add('vim-scripts/YankRing.vim')
   call minpac#add('vim-scripts/AutoComplPop')
   call minpac#add('vim-scripts/CCTree')
-  call minpac#add('vim-scripts/Gundo')
+  call minpac#add('vim-scripts/Gundo', {'type': 'opt'})
 
   " NERDTree: File explorer.
   call minpac#add('preservim/nerdtree')
@@ -45,11 +45,26 @@ function! PackInit() abort
   call minpac#add('preservim/nerdcommenter')
   call minpac#add('preservim/vim-indent-guides')
   call minpac#add('preservim/vim-pencil')
+  call minpac#add('preservim/vimux')
+
+  " vim-tmux-navigator
+  " Use local version if it exists
+  if isdirectory(glob('~/.local/share/tmux/plugin/vim-tmux-navigator'))
+    " Use the same file for both vim and tmux
+    call minpac#add('~/.local/share/tmux/plugin/vim-tmux-navigator')
+  else
+    call minpac#add('christoomey/vim-tmux-navigator')
+  endif
+
+  " Show git status in file tree
+  call minpac#add('xuyuanp/nerdtree-git-plugin')
 
   call minpac#add('ludovicchabant/vim-gutentags')
 
   " surround-like plugin
   call minpac#add('machakann/vim-sandwich')
+
+  call minpac#add('sjl/gundo.vim')
 
   " Replace auto-pairs with delimitMate. Disable it by default
   call minpac#add('LunarWatcher/auto-pairs', {'type': 'opt'})
