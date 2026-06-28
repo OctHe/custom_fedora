@@ -1,6 +1,6 @@
 # Custom Fedora
 
-This is a opinionate fedora distribution with the help of image builder.
+This is a custom fedora distribution with the help of image builder.
 
 ## Image Builder
 
@@ -25,10 +25,3 @@ The image-builder will generate a minimal-installer
     sudo image-builder build image-installer --distro fedora-43 --blueprint custom_fedora.toml
 
 
-## Postinstall
-
-After successfully install the OS, change the default shell to nushell by using the command
-
-    sudo chsh -s /usr/bin/nu <USER>
-
-where <USER> is the custom user name.
