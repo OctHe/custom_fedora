@@ -34,6 +34,11 @@ mode = "0755"
 user = "root"
 group = "root"
 
+# Search tool
+[[packages]]
+name = "ack"
+
+# Editor
 [[packages]]
 name = "vim-enhanced"
 
@@ -52,6 +57,7 @@ data = '''
 {{INSERT_VIM_CONFIG}}
 '''
 
+# Terminal
 [[packages]]
 name = "screenfetch"
 

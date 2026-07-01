@@ -72,6 +72,8 @@ function! PackInit() abort
   " Automatic closing of quotes, parenthesis, brackets,
   call minpac#add('Raimondi/delimitMate')
 
+  call minpac#add('mileszs/ack.vim')
+
   call minpac#add('psliwka/vim-smoothie')
 
   call minpac#add('timsu92/vim-easymotion')
@@ -184,6 +186,8 @@ set number                             " Show line number
 set mouse=a                            " Enable mouse in all mode
 set scrolloff=5                        " Show a few lines around the cursor
 set fileencodings=utf-8,gb18030,latin1
+
+set shell=/bin/bash                    " Use bash in vim to avoid tmp file error when use grep/ack.vim
 
 set background=dark
 
